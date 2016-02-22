@@ -101,8 +101,8 @@ h1 {
 }
 
 h2 {
-	font-size:25px;
-	font-family:'josefin slab', sans-serif;
+	font-size:32px;
+	font-family:'dancing script', cursive;
 }
 
 .title p {
@@ -147,10 +147,15 @@ h2 {
 
 .about p {
 	font-family:'josefin slab', sans-serif;
+	font-size:24px;
 	line-height:1.2;
 	width:400px;
 	margin:20px auto;
 	text-align:justify;
+}
+
+.about a {
+	margin-top:40px;
 }
 
 /*LETTER*/
@@ -176,6 +181,7 @@ h2 {
 	height:50%;
 	border-bottom:1px solid #000;
 	border-top:1px solid #000;
+	box-shadow: 0 5px 5px #ccc;
 }
 
 .letter p {
@@ -211,6 +217,10 @@ h2 {
 	word-wrap:normal;
 }
 
+form p {
+	opacity:1;
+}
+
 #work {
 	display:block;
 	height:100px;
@@ -220,7 +230,7 @@ h2 {
 
 #seal {
 	font-size:400px;
-	opacity:.6;
+	opacity:1;
 	position:relative;
 	top:-200px;
 	color:#C3AAAA;
@@ -228,14 +238,19 @@ h2 {
 
 /*COMPLETE*/
 
-.complete {
+.letter .complete {
 	display:none;
-	pasition:fixed;
-	z-index:1;
+	position:fixed;
+	z-index:2;
 	left:50%;
-	margin-left:-190px;
-	width:380px;
-	height:380px;
+	top:25%;
+	width:320px;
+	margin-left:-160px;
+	height:auto;
+	color:black;
+	background-color:white;
+	padding:auto;
+	text-align:center;
 }
 
 /*FOOTER*/
