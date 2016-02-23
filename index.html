@@ -42,12 +42,13 @@
 		<div class="container3">
 			<div class="letter" id="letter">
 				<div class='complete'>
-					<p>All Done!</p>
+					<p>All Done! A new window should open for your Tweet. Do NOT edit the Tweet ID# or the system won't work!</p>
+					<p>Click the seal to submit another work.</p>
 				</div>
 				<form class="clearfix" id="publish">
-					<p>Fill out your email address, then copy your original work into the prompt below. Click <span class="soleau">Poo-Tee-Weet</span> below to send a Tweet with a unique identifier</p>
-					<input type="email" value="Email address">
-					<input class="left" id="work">
+					<p>Fill out your email address, then copy your original work into the prompt below.</p> <p>Click <span class="soleau">Poo-Tee-Weet</span> below to send your Soleau message!</p>
+					<textarea class="left" id="work"></textarea>
+					<input type="email" value="Email address..." id="email" onfocus="this.value=''">
 					<button>Poo-Tee-Weet</button>
 				</form>
 				<div class="hline">
@@ -59,7 +60,7 @@
 			<a class ="left logo" href="index.html">Soleau</a>
 			<nav class ="right clearfix">
 				<ul>
-					<li class="right"><a class="back" href="#about">About</a></li>
+					<li class="right"><a class="back" href="#">FAQ</a></li>
 				</ul>
 			</nav>
 		</footer>
