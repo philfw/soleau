@@ -14,12 +14,14 @@
 
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="js/jquery-1.12.0.min.js"></script>
 		<header class="clearfix">
 			<a class ="left logo" href="index.html">Soleau</a>
 			<nav class ="right clearfix">
 				<ul>
 					<li class="right"><a href="#letter" class="next">Publish</a></li>
 					<li class="right"><a href="#about" class="next">About</a></li>
+					<li class="right"><a class="faq" href="faq.html">FAQ</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -48,18 +50,21 @@
 				<form class="clearfix" id="publish">
 					<p>Fill out your email address, then copy your original work into the prompt below.</p> <p>Click <span class="soleau">Poo-Tee-Weet</span> below to send your Soleau message!</p>
 					<textarea class="left" id="work"></textarea>
-					<input type="email" value="Email address..." id="email" onfocus="this.value=''">
-					<button>Poo-Tee-Weet</button>
+					<input type="email" value="Email address..." id="email" onfocus="this.value=''" onblur="this.value='Email address...'">
+					<button type="submit">Poo-Tee-Weet</button>
 				</form>
 				<div class="hline">
 				</div>
-				<span id="seal">&commat;</span>
+				<div class="clearfix">
+					<span id="seal">&commat;</span>
 			</div>
 		</div>
 		<footer>
 			<a class ="left logo" href="index.html">Soleau</a>
 			<nav class ="right clearfix">
 				<ul>
+					<li class="right"><a href="#letter" class="next">Publish</a></li>
+					<li class="right"><a href="#about" class="next">About</a></li>
 					<li class="right"><a class="back" href="#">FAQ</a></li>
 				</ul>
 			</nav>

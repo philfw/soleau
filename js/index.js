@@ -10,10 +10,9 @@ $('form#publish').on('submit', function (event){
 	event.preventDefault();
 	$('input#email').attr('value','');
 	$('form').slideUp(500, function() {
-		$('#seal').fadeIn(800);
+		$('#seal').show();
 		$('.complete').slideDown(500)
 	});
-	window.open('https://twitter.com/share?text=I just registered a work with %23Soleau IDno000000');
 });
 
 $('#seal').on('click', function (){
@@ -23,4 +22,18 @@ $('#seal').on('click', function (){
 	});
 });
 
+// NUMBER GENERATOR
 
+// $( document ).ready(function() {
+
+// 	var digits = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0']
+
+// 	var soleauId = idGenerator();
+
+// 	function idGenerator () {
+// 		for (var i=0; i<7; i++) 
+// 			var randNum = Math.floor(Math.random() * digits.length);
+			
+// 	};
+
+// 	console.log(soleauId);

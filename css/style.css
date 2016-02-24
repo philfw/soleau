@@ -51,7 +51,6 @@ header {
 	background-color:#000;
 	position:fixed;
 	z-index:1;
-	border:inset 3px;
 }
 
 a.logo {
@@ -68,7 +67,19 @@ nav a.next {
 	transition-property:opacity;
 }
 
+nav a.faq {
+	font-family:'josefin slab', sans-serif;
+	font-size:24px;
+	color:white;
+	transition-property:opacity;
+}
+
 nav a.next:hover {
+	opacity:.6;
+	transition-duration: .2s;
+}
+
+nav a.faq:hover {
 	opacity:.6;
 	transition-duration: .2s;
 }
@@ -95,7 +106,7 @@ nav li {
 }
 
 h1 {
-	font-size:40px;
+	font-size:60px;
 	font-family:'josefin slab', sans-serif;
 }
 
@@ -182,6 +193,18 @@ h2 {
 	box-shadow: 0 5px 5px #ccc;
 }
 
+#tweet {
+	width:400px;
+	height:800px;
+	display:none;
+	font-size:400px;
+	opacity:1;
+	position:relative;
+	top:-200px;
+	cursor:pointer;
+	z-index:3;
+}
+
 /*FORM*/
 
 .letter p {
@@ -219,9 +242,11 @@ h2 {
 	font-family:'josefin slab', sans-serif;
 	vertical-align: middle;
 	border-radius:5px;
+	border:1px solid #000;
 }
 
 #work {
+	border:1px solid #000;
 	display:block;
 	height:100px;
 	width:300px;
@@ -298,4 +323,12 @@ footer li a {
 	font-size:24px;
 	color:white;
 	transition-property:opacity;
+}
+
+footer li a:hover {
+	font-family:'josefin slab', sans-serif;
+	font-size:24px;
+	color:white;
+	opacity:.6;
+	transition-duration: .2s;
 }
