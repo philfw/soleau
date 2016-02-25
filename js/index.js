@@ -1,4 +1,9 @@
 
+$(document).ready(function(){
+	$('.title').fadeIn(500);
+	$('.title').css('display','table-cell')
+});
+
 $('.next').on('click', function (event){
 	event.preventDefault();
 	$('html, body').animate({
@@ -21,6 +26,15 @@ $('#seal').on('click', function (){
 	});
 });
 
+$(document).ready(function(){
+	$('.faq li').fadeIn(500);
+});
+
+
+$('.faq li').on('click', function (){
+	$( this ).next().slideToggle();
+});
+
 // NUMBER GENERATOR
 
 var solueaId = getId();
@@ -34,7 +48,11 @@ function getId() {
 	    for( var i=0; i < 10; i++ )
 	        soleauId += charset.charAt(Math.floor(Math.random() * charset.length));
 
+<<<<<<< HEAD
 		console.log(soleauId);
 
 	});
 };
+=======
+// 	console.log(soleauId);
+>>>>>>> origin/master
