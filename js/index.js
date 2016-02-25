@@ -6,6 +6,7 @@ $('.next').on('click', function (event){
 	}, 500);
 });
 
+<<<<<<< Updated upstream
 $('form#publish').on('submit', function (event){
 	event.preventDefault();
 	$('input#email').attr('value','');
@@ -37,3 +38,8 @@ $('#seal').on('click', function (){
 // 	};
 
 // 	console.log(soleauId);
+=======
+$(document).ready(function(){
+	$('.title').fadeIn(500);
+});
+>>>>>>> Stashed changes
