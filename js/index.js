@@ -1,4 +1,9 @@
 
+$(document).ready(function(){
+	$('.title').fadeIn(500);
+	$('.title').css('display','table-cell')
+});
+
 $('.next').on('click', function (event){
 	event.preventDefault();
 	$('html, body').animate({
@@ -6,10 +11,8 @@ $('.next').on('click', function (event){
 	}, 500);
 });
 
-<<<<<<< Updated upstream
 $('form#publish').on('submit', function (event){
 	event.preventDefault();
-	$('input#email').attr('value','');
 	$('form').slideUp(500, function() {
 		$('#seal').show();
 		$('.complete').slideDown(500)
@@ -21,6 +24,15 @@ $('#seal').on('click', function (){
 	$('#seal').fadeOut(300, function() {
 		$('form#publish').slideDown(500);
 	});
+});
+
+$(document).ready(function(){
+	$('.faq li').fadeIn(500);
+});
+
+
+$('.faq li').on('click', function (){
+	$( this ).next().slideToggle();
 });
 
 // NUMBER GENERATOR
@@ -38,8 +50,3 @@ $('#seal').on('click', function (){
 // 	};
 
 // 	console.log(soleauId);
-=======
-$(document).ready(function(){
-	$('.title').fadeIn(500);
-});
->>>>>>> Stashed changes
