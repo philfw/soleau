@@ -8,9 +8,8 @@ $('.next').on('click', function (event){
 
 $('form#publish').on('submit', function (event){
 	event.preventDefault();
-	$('input#email').attr('value','');
 	$('form').slideUp(500, function() {
-		$('#seal').show();
+		$('#seal').fadeIn(500);
 		$('.complete').slideDown(500)
 	});
 });
@@ -24,16 +23,18 @@ $('#seal').on('click', function (){
 
 // NUMBER GENERATOR
 
-// $( document ).ready(function() {
+var solueaId = getId();
 
-// 	var digits = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9','0']
+function getId() {
+	$( document ).ready(function() {
 
-// 	var soleauId = idGenerator();
+		soleauId = "";
+	    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV0123456789";
 
-// 	function idGenerator () {
-// 		for (var i=0; i<7; i++) 
-// 			var randNum = Math.floor(Math.random() * digits.length);
-			
-// 	};
+	    for( var i=0; i < 10; i++ )
+	        soleauId += charset.charAt(Math.floor(Math.random() * charset.length));
 
-// 	console.log(soleauId);
+		console.log(soleauId);
+
+	});
+};
