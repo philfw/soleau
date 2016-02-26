@@ -1,8 +1,12 @@
 
+// TITLE FADEIN
+
 $(document).ready(function(){
 	$('.title').fadeIn(500);
 	$('.title').css('display','table-cell')
 });
+
+// AUTO SCROLLING
 
 $('.next').on('click', function (event){
 	event.preventDefault();
@@ -11,11 +15,14 @@ $('.next').on('click', function (event){
 	}, 500);
 });
 
+// SUBMIT FORM
+
 $('form#publish').on('submit', function (event){
 	event.preventDefault();
+	window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
 	$('form').slideUp(500, function() {
 		$('#seal').fadeIn(500);
-		$('.complete').slideDown(500)
+		$('.complete').slideDown(500);
 	});
 });
 
@@ -25,6 +32,8 @@ $('#seal').on('click', function (){
 		$('form#publish').slideDown(500);
 	});
 });
+
+// FAQ
 
 $(document).ready(function(){
 	$('.faq li').fadeIn(500);
@@ -45,14 +54,11 @@ function getId() {
 		soleauId = "";
 	    var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUV0123456789";
 
-	    for( var i=0; i < 10; i++ )
+	    for( var i=0; i < 10; i++ ){
 	        soleauId += charset.charAt(Math.floor(Math.random() * charset.length));
+	    }
 
-<<<<<<< HEAD
 		console.log(soleauId);
 
 	});
 };
-=======
-// 	console.log(soleauId);
->>>>>>> origin/master
