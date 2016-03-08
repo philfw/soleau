@@ -9,7 +9,7 @@
 
 		<title>Soleau</title>
 
-		<meta name="keywords" content="unofficial, copyright, registry, poor, man, soleau, twitter, email, publish">
+		<meta name="keywords" content="poor, man, copyright, soleau, envelope, copyright, regist, law">
 	</head>
 
 	<body>
@@ -22,7 +22,7 @@
 					<li class="right"><a href="#letter" class="next">Publish</a></li>
 					<li class="right"><a href="#about" class="next">About</a></li>
 					<li class="right"><a class="faq" href="faq.html">FAQ</a></li>
-					<li class="right"><a class="faq" href="https://twitter.com/#soleau/" target="_blank">'Registry'</a></li>
+					<li class="right"><a class="faq" href="https://twitter.com/#soleau/" target="_blank">#Soleau</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -37,31 +37,30 @@
 			<div class="about" id="about">
 				<h2>The Modern Day</h2>
 				<h2>Poor Man's Copyright</h2>
-				<p>The Soleau envelope is named for the French inventor Eugene Soleau. It is a way of proving when you created an original work. Simply seal your original plan or work into a letter, then send the letter to yourself, using the postal service's postmark as proof of the date.</p>
-				<p><span class="soleau">Soleau</span> is a modern analogue to the Soleau envelope.  Copy and paste an original work into the box below, and that file will be emailed directly to you with a unique ID number.  Simultanesouly, that ID will be tweeted out with the hashtag <span class="soleau"><a href="https://twitter.com/hashtag/soleau" target="_blank">#Soleau</a></span>.
-				<a href="#letter" class="next">&#11015;</a>
+				<p>The Soleau envelope is named for the French inventor Eugene Soleau. It is a fairly common method of proving when you created an original work or invention: simply seal your original plan or work into envelope, then send the envelope to yourself by post. You can then use the postmark date to prove that the work existed at that time (if you don't open the envelope!).</p>
+				<p><span class="soleau">Soleau</span> is a modern analogue to the Soleau envelope.  Copy and paste an original work into the box below, and a plain text version of the work will be emailed directly to you with a unique ID number.  At the same time, we will compose a Tweet for you with that same ID and the hashtag <span class="soleau"><a href="https://twitter.com/hashtag/soleau" target="_blank">#Soleau</a></span>. Post that Tweet to show everyone that the email we sent you is legit!
+				<a href="#work" class="next">&#11015;</a>
+			</div>
+		</div>
+		<div class="container2">
+			<div id="work">
+				<h2>How Do We Get Started?</h2>
+				<p>First, you should copy and paste below the work you want to register with <span class="soleau">#Soleau</span>.</p>
+				<form>
+					<textarea value="Copy and paste your work here..." onfocus="this.value=''"></textarea>
+				</form>
+				<a href="#email" class="next">&#11015;</a>
 			</div>
 		</div>
 		<div class="container3">
-			<div class="letter" id="letter">
-				<div class='complete'>
-					<p>All Done! A new window should open for your Tweet. Do NOT edit the Tweet ID# or the system won't work!</p>
-					<p>Click the seal to submit another work.</p>
-				</div>
+			<div id="email">
 				<form class="clearfix" id="publish">
-					<p>Fill out your email address, then copy your original work into the prompt below.</p> <p>Click <span class="soleau">Poo-Tee-Weet</span> below to send your Soleau message!</p>
-					<textarea class="left" id="work"></textarea>
-					<input type="email" value="Email address..." id="email" onfocus="this.value=''" onblur="this.value='Email address...'">
-					<button type="submit">Poo-Tee-Weet</button>
+					<p>Now all we need is your email address. When you click <span class="soleau">Poo-Tee-Weet</span> below, the work you pasted above will be sent to your email, and a tweet with your unique ID will be composed for you in a separate window!</p>
+					<input type="email" value="Email address..." id="email" onfocus="this.value=''">
+					<button type="submit" id="pooTeeWeet">Poo-Tee-Weet</button>
 				</form>
-				<div class="hline">
-				</div>
-				<div class="clearfix">
-					<span id="seal">&commat;</span>
-				</div>
 			</div>
-		</div>
-		<footer>
+<!-- 			<footer>
 			<a class ="left logo" href="index.html">Soleau</a>
 			<nav class ="right clearfix">
 				<ul>
@@ -70,7 +69,8 @@
 					<li class="right"><a class="back" href="faq.html">FAQ</a></li>
 				</ul>
 			</nav>
-		</footer>
+			</footer> -->
+		</div>
 		<script src="js/index.js"></script>
 	</body>
 

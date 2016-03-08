@@ -17,32 +17,30 @@ $('.next').on('click', function (event){
 
 // SUBMIT FORM
 
-$('form#publish').on('submit', function (event){
+$('form#publish').on('submit', function (event) {
 	event.preventDefault();
-	window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
-	$('form').slideUp(500, function() {
-		$('#seal').fadeIn(500);
-		$('.complete').slideDown(500);
-	});
+	submitForm();	
 });
 
-$('#seal').on('click', function (){
-	$('.complete').toggle();
-	$('#seal').fadeOut(300, function() {
-		$('form#publish').slideDown(500);
-	});
-});
+$('#pooTeeWeet').on('click', submitForm());
 
-// FAQ
+function submitForm () {
+	var emailVal = $('#email').val();
+	if (emailVal.indexOf('@') >=0) {
+		window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
+		$('form').slideUp(500, function() {
+			$('#seal').fadeIn(500);
+			$('.complete').slideDown(500);
+		});
+	} 
+};
 
-$(document).ready(function(){
-	$('.faq li').fadeIn(500);
-});
-
-
-$('.faq li').on('click', function (){
-	$( this ).next().slideToggle();
-});
+// $('#seal').on('click', function (){
+// 	$('.complete').toggle();
+// 	$('#seal').fadeOut(300, function() {
+// 		$('form#publish').slideDown(500);
+// 	});
+// });
 
 // NUMBER GENERATOR
 
