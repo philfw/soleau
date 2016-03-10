@@ -19,20 +19,11 @@ $('.next').on('click', function (event){
 
 $('form#publish').on('submit', function (event) {
 	event.preventDefault();
-	submitForm();	
+	submitForm();
 });
 
-$('#pooTeeWeet').on('click', submitForm());
-
 function submitForm () {
-	var emailVal = $('#email').val();
-	if (emailVal.indexOf('@') >=0) {
-		window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
-		$('form').slideUp(500, function() {
-			$('#seal').fadeIn(500);
-			$('.complete').slideDown(500);
-		});
-	} 
+	window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
 };
 
 // NUMBER GENERATOR

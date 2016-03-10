@@ -55,6 +55,7 @@ header {
 	background-color:#000;
 	position:fixed;
 	z-index:1;
+	box-shadow: 
 }
 
 a.logo {
@@ -113,6 +114,7 @@ nav li {
 	text-align:center;
 	font-family:'josefin slab', sans-serif;
 	padding-top:10%;
+	text-shadow: 2px 2px #ccc;
 }
 
 h1 {
@@ -153,7 +155,7 @@ h2 {
 /*ABOUT*/
 
 .container2 {
-	background-color: #F5F7EC;
+	background-color: #f7e8b2;
 	height:100vh;
 	width:100%;
 	display:table;
@@ -227,7 +229,7 @@ textarea[value] {
 	min-height:768px;
 	width:100%;
 	position:relative;
-	background-color: #F5F7EC;
+	background-color: #f7e8b2;
 	display:table;
 }
 
@@ -237,9 +239,13 @@ textarea[value] {
 	line-height:1.2;
 	display:table-cell;
 	vertical-align: middle;
-	width:60%;
 	text-align:center;
 	position:relative;
+	width:100%;
+}
+
+#email h2 {
+	margin-bottom:40px;
 }
 
 #email p {
@@ -250,26 +256,28 @@ textarea[value] {
 	margin-bottom:20px;
 	font-size:24px;
 	margin:0 auto;
-	max-width:40%;
 }
 
 /*FORM*/
 
-#email form {
+#email form#publish {
 	display:table-cell;
 	font-family:'josefin slab', sans-serif;
 	line-height:1.2;
 	text-align:justify;
-	padding-top:100px;
-	vertical-align: middle;
+	padding-top:40px;
+	width:20%;
+	min-width:360px;
+	margin-left:40%;
 }
 
 #email input {
 	width:20%;
 	margin:40px 40%;
+	text-align:left;
 }
 
-button {
+#email input[type="submit"] {
 	font-family:'dancing script', cursive;
 	cursor:pointer;
 	display:block;
@@ -281,9 +289,10 @@ button {
 	font-size:20px;
 	background-color:#000;
 	color:#fff;
+	text-align: center;
 }
 
-button:hover {
+#email input[type="submit"]:hover {
 	background-color:#333;
 }
 
@@ -304,10 +313,13 @@ button:hover {
 	transition-property:color;
 	display:none;
 	cursor:pointer;
+	color:#000;
+	transition-duration:.4s;
 }
 
 .faq li:hover {
 	color:#C3AAAA;
+	transition-property:color;
 	transition-duration:.4s;
 }
 
