@@ -35,13 +35,6 @@ function submitForm () {
 	} 
 };
 
-// $('#seal').on('click', function (){
-// 	$('.complete').toggle();
-// 	$('#seal').fadeOut(300, function() {
-// 		$('form#publish').slideDown(500);
-// 	});
-// });
-
 // NUMBER GENERATOR
 
 var solueaId = getId();

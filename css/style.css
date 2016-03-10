@@ -102,7 +102,9 @@ nav li {
 	display:table;
 	height:100vh;
 	width:100%;
-	background-color: #F5F7EC;
+	background-image: url(../images/paperbg.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
 }
 
 .title {
@@ -142,7 +144,7 @@ h2 {
 .title a {
 	display:block;
 	padding-top:20px;
-	color:#ccc;
+	color:black;
 	width:60px;
 	margin:20px auto;
 	text-align:center;
@@ -194,6 +196,8 @@ div.about {
 #work p {
 	margin-top:40px;
 	margin-bottom:40px;
+	width:60%;
+	margin-left:20%;
 }
 
 textarea {
