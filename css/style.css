@@ -260,7 +260,7 @@ textarea[value] {
 
 /*FORM*/
 
-#email form#publish {
+#emailForm form#publish {
 	display:table-cell;
 	font-family:'josefin slab', sans-serif;
 	line-height:1.2;

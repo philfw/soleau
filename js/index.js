@@ -23,7 +23,11 @@ $('form#publish').on('submit', function (event) {
 });
 
 function submitForm () {
-	window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
+	var emailVal = $('#emailSubmit').val();
+	if (emailVal.indexOf('@') >=0) {
+		window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
+	}
+	else {$('#emailSubmit').css('color','red');} 
 };
 
 // NUMBER GENERATOR
