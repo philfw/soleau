@@ -6,10 +6,17 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-
 		<title>Soleau</title>
-
 		<meta name="keywords" content="poor, man, copyright, soleau, envelope, copyright, regist, law">
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-75289817-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
 	</head>
 
 	<body>
@@ -19,11 +26,16 @@
 			<a class ="left logo" href="index.html">Soleau</a>
 			<nav class ="right clearfix">
 				<ul>
-					<li class="right"><a href="#letter" class="next">Publish</a></li>
 					<li class="right"><a href="#about" class="next">About</a></li>
 					<li class="right"><a class="faq" href="faq.html">FAQ</a></li>
 					<li class="right"><a class="faq" href="https://twitter.com/#soleau/" target="_blank">#Soleau</a></li>
 				</ul>
+				<div class="hamburger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+					<div id=""
+				</div>
 			</nav>
 		</header>
 		<div class="container1" id="soleau">
@@ -39,26 +51,27 @@
 				<h2>Poor Man's Copyright</h2>
 				<p>The Soleau envelope is named for the French inventor Eugene Soleau. It is a fairly common method of proving when you created an original work or invention: simply seal your original plan or work into envelope, then send the envelope to yourself by post. You can then use the postmark date to prove that the work existed at that time (if you don't open the envelope!).</p>
 				<p><span class="soleau">Soleau</span> is a modern analogue to the Soleau envelope.  Copy and paste an original work into the box below, and a plain text version of the work will be emailed directly to you with a unique ID number.  At the same time, we will compose a Tweet for you with that same ID and the hashtag <span class="soleau"><a href="https://twitter.com/hashtag/soleau" target="_blank">#Soleau</a></span>. Post that Tweet to show everyone that the email we sent you is legit!
-				<a href="#work" class="next">&#11015;</a>
-			</div>
-		</div>
-		<div class="container2">
-			<div id="work">
-				<h2>How Do We Get Started?</h2>
-				<p>First, you should copy and paste below the work you want to register with <span class="soleau">#Soleau</span>.</p>
-				<form>
-					<textarea placeholder="Copy and paste your work here..."></textarea>
-				</form>
 				<a href="#email" class="next">&#11015;</a>
 			</div>
 		</div>
-		<div class="container3">
+		<div class="container2">
 			<div id="email">
+				<h2>How Do We Get Started?</h2>
+				<p>First, we need your email.</p>
+				<form>
+					<input type="email" placeholder="Email address..." id="fullEmail" name="email">
+				</form>
+				<a href="#work" class="next">&#11015;</a>
+			</div>
+		</div>
+		<div class="container3">
+			<div id="work">
 				<h2>Ok, let's go!</h2>
-				<p>Now all we need is your email address. When you click <span class="soleau">Publish</span> below, the work you pasted above will be sent to your email, and a tweet with your unique ID will be composed for you in a separate window!</p>
-				<form class="clearfix" id="publish">
-					<input type="email" placeholder="Email address..." id="email" name="email">
-					<input type="submit" id="pooTeeWeet" value="Publish">
+				<p>Now, copy and paste the original work you want to 'register' with <span class="soleau">Soleau</span>. When you click <span class="soleau">Publish</span> a new window will open with your Tweet registration.</p>
+				<form id="publish" enctype="text/plain" method="post">
+					<input type="hidden" name="SoleauID" id="soleauID"/>
+					<textarea name="Your Work" placeholder="Copy and paste your work here..." id="fullWork"></textarea>
+					<input type="submit" id="pooTeeWeet" value="publish">
 				</form>
 			</div>
 <!-- 			<footer>

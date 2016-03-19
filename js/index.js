@@ -15,20 +15,20 @@ $('.next').on('click', function (event){
 	}, 500);
 });
 
-// SUBMIT FORM
+//WHEN SCROLL TO BOTTOM, ADD MAILTO ATTRIBUTE
 
-$('form#publish').on('submit', function (event) {
-	event.preventDefault();
-	submitForm();
+var workVal;
+var emailVal;
+
+$( window ).scroll(function() {
+	if(($( window ).scrollTop() + $( window ).height()) > ($( document ).height() - 100)) {
+		emailVal = $('#fullEmail').val();
+		$('form#publish').attr('action', '"mailto:' +emailVal+ '"');
+		console.log($('form#publish').attr('action'));
+	};
 });
 
-function submitForm () {
-	var emailVal = $('#emailSubmit').val();
-	if (emailVal.indexOf('@') >=0) {
-		window.open("https://twitter.com/share?text=I just registered a work with %23Soleau ID %23"+soleauId+"");
-	}
-	else {$('#emailSubmit').css('color','red');} 
-};
+// SUBMIT FORM
 
 // NUMBER GENERATOR
 
@@ -46,5 +46,9 @@ function getId() {
 
 		console.log(soleauId);
 
+		//assign soleauID to publish form
+		$('#soleauID').val(soleauId);
 	});
 };
+
+//
