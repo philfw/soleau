@@ -5,23 +5,21 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<style>
 			h1 {
-				margin-top:20%;
-				width:90%;
-				margin-left:5%;
-				text-align:center;
-			}
-			p {
-				font-size:2em;
-				margin-top:20px;
-				line-height:1;
-				width:80%;
-				margin-left:10%;
-				text-align:center;
+				margin-top:10%;
+				width:60%;
+				margin-left:20%;
 			}
 			header {
 				position:fixed;
 				top:0;
 			}
+			p {
+				margin-top:40px;
+				font-size:2em;
+				width:80%;
+				margin-left:10%;
+			}
+
 		</style>
 	</head>
 
@@ -46,30 +44,32 @@
 			</nav>
 		</header>
 
-		<?php
-			
-			if(isset($_POST['email'])) {
-				$SoleauID = $_POST['SoleauID'];
-				$workTitle = $_POST['workTitle'];
-				$subject = $workTitle . " Your registered work with Soleau ID#" . $SoleauID;
-				$email = $_POST['email'];
-				$work = $_POST['yourwork'];
-				$message = wordwrap($work, 70, "\r\n");
-
-				echo "<h1>You just registered a work with ID " . $SoleauID . ", which was delivered to " . $email . "</h1>";
-				echo "<p>The title of the Work is " . $workTitle . "<br>";
-				echo "The work in full: <br>" . $work . "<br>";
-				echo "Check your email!</p>";
-
-				mail($email, $subject, $message);
-
-			}
-		?>
-
 		<div id="work">
-			<p>Now you can click the button below to compose a Tweet with the same Soleau ID!</p>
-			<a href="https://twitter.com/share?text=.@SoleauLetter I just registered a work with SoleauID %23<?php echo $SoleauID?>" target="_blank">Tweet!</a>
 
+			<?php
+				
+				if(isset($_POST['email'])) {
+					$SoleauID = $_POST['SoleauID'];
+					$workTitle = $_POST['workTitle'];
+					$subject = $workTitle . ": Your registered work with Soleau ID#" . $SoleauID;
+					$email = $_POST['email'];
+					$work = $_POST['yourwork'];
+					$message = wordwrap($work, 70, "\r\n");
+
+					echo "<h1>You just registered a work with ID " . $SoleauID . ", which was delivered to " . $email . "</h1>";
+					echo "<p>The title of the Work is " . $workTitle . "<br><br>";
+					echo "The work in full: <br><br>" . $work . "</p>";
+					echo "<p>Check your email!</p>";
+
+					mail($email, $subject, $message);
+
+				}
+
+			?>
+			<p>Now you can click the button below to compose a Tweet with the same Soleau ID!</p>
+			<a href="https://twitter.com/share?text=.@SoleauLetter I just registered a work with SoleauID %23<?php echo $SoleauID?>" target="_blank"><input type="submit" value="Tweet!"></a>
+			
+		</div>
 		<script src="js/index.js"></script>
 	</body>
 </html>

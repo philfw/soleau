@@ -51,9 +51,8 @@ function getId() {
 
 //ON CLICK COMPOSE TWEET
 
-// $('#pooTeeWeet').on('click', function(event) {
-// 	event.preventDefault();
-// 	window.open('https://twitter.com/share?text=.@SoleauLetter I just registered a work with SoleauID %23' +soleauId, '_blank', '', '')
-// });
+$('#pooTeeWeet').on('click', function(event) {
+	event.preventDefault();
+});
 
-//
+

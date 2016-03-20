@@ -216,8 +216,7 @@ textarea {
 	margin-left:-30%;
 	margin-bottom:40px;
 	background-color:#fff;
-	border:0px solid;
-	border-radius:5px;
+	border:1px solid #ccc;
 }
 
 textarea[value] {
@@ -267,7 +266,7 @@ input#fullEmail, input#workTitle {
 	text-align:left;
 }
 
-#work input[type="submit"] {
+input[type="submit"] {
 	font-family:'dancing script', cursive;
 	cursor:pointer;
 	display:block;
@@ -282,11 +281,9 @@ input#fullEmail, input#workTitle {
 	text-align: center;
 }
 
-#work input[type="submit"]:hover {
+input[type="submit"]:hover {
 	background-color:#333;
 }
-
-#work input
 
 /*FAQ*/
 
@@ -294,14 +291,14 @@ input#fullEmail, input#workTitle {
 	vertical-align:middle;
 	width:90%;
 	font-family:'josefin slab', sans-serif;
-	margin-left:40px;
+	margin-left:5%;
 	margin-top:150px;
 	font-size:40px;
 }
 
 .faq li {
 	margin-bottom:40px;
-	max-width:90%;
+	width:100%;
 	transition-property:color;
 	display:none;
 	cursor:pointer;
@@ -318,14 +315,14 @@ input#fullEmail, input#workTitle {
 .faq p {
 	font-size:24px;
 	min-width:400px;
-	max-width:80%;
+	width:90%;
 	margin-bottom:40px;
 	display:none;
-	padding-left:40px;
+	margin-left:5%;
 }
 
 @media only screen and (max-width:900px) and (min-width:641px) {
-	.about p {
+.about p {
 	width:90%;
 	margin:10px 5%;
 	font-size:2em;
