@@ -15,7 +15,7 @@ $('.next').on('click', function (event){
 	}, 500);
 });
 
-//WHEN SCROLL TO BOTTOM, ADD MAILTO ATTRIBUTE
+//WHEN SCROLL TO BOTTOM, POPULATE HIDDEN VALUES
 
 var workVal;
 var emailVal;
@@ -23,12 +23,10 @@ var emailVal;
 $( window ).scroll(function() {
 	if(($( window ).scrollTop() + $( window ).height()) > ($( document ).height() - 100)) {
 		emailVal = $('#fullEmail').val();
-		$('form#publish').attr('action', '"mailto:' +emailVal+ '"');
-		console.log($('form#publish').attr('action'));
+		$('#toLine').val(emailVal);
+		console.log($('#toLine').val());
 	};
 });
-
-// SUBMIT FORM
 
 // NUMBER GENERATOR
 
@@ -50,5 +48,12 @@ function getId() {
 		$('#soleauID').val(soleauId);
 	});
 };
+
+//ON CLICK COMPOSE TWEET
+
+// $('#pooTeeWeet').on('click', function(event) {
+// 	event.preventDefault();
+// 	window.open('https://twitter.com/share?text=.@SoleauLetter I just registered a work with SoleauID %23' +soleauId, '_blank', '', '')
+// });
 
 //

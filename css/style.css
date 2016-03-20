@@ -9,6 +9,8 @@ html {
 body {
 	background-color: rgb(255,229,204);
 	font-size:10px;
+	font-family: 'josefin slab', sans-serif;
+	text-align:center;
 }
 
 a {
@@ -232,7 +234,7 @@ textarea[value] {
 	display:table;
 }
 
-#email, input#fullEmail {
+#email, input#fullEmail, input#workTitle {
 	font-family:'josefin slab', sans-serif;
 	font-size:24px;
 	line-height:1.2;
@@ -259,7 +261,7 @@ textarea[value] {
 
 /*FORM*/
 
-input#fullEmail {
+input#fullEmail, input#workTitle {
 	margin:20px 0;
 	width:200px;
 	text-align:left;

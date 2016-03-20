@@ -28,13 +28,13 @@
 				<ul>
 					<li class="right"><a href="#about" class="next">About</a></li>
 					<li class="right"><a class="faq" href="faq.html">FAQ</a></li>
-					<li class="right"><a class="faq" href="https://twitter.com/#soleau/" target="_blank">#Soleau</a></li>
+					<li class="right"><a class="faq" href="https://twitter.com/search?src=typd&q=%40soleauletter" target="_blank">@SoleauLetter</a></li>
 				</ul>
 				<div class="hamburger">
 					<div class="line"></div>
 					<div class="line"></div>
 					<div class="line"></div>
-					<div id=""
+					<div id="">
 				</div>
 			</nav>
 		</header>
@@ -49,8 +49,8 @@
 			<div class="about" id="about">
 				<h2>The Modern Day</h2>
 				<h2>Poor Man's Copyright</h2>
-				<p>The Soleau envelope is named for the French inventor Eugene Soleau. It is a fairly common method of proving when you created an original work or invention: simply seal your original plan or work into envelope, then send the envelope to yourself by post. You can then use the postmark date to prove that the work existed at that time (if you don't open the envelope!).</p>
-				<p><span class="soleau">Soleau</span> is a modern analogue to the Soleau envelope.  Copy and paste an original work into the box below, and a plain text version of the work will be emailed directly to you with a unique ID number.  At the same time, we will compose a Tweet for you with that same ID and the hashtag <span class="soleau"><a href="https://twitter.com/hashtag/soleau" target="_blank">#Soleau</a></span>. Post that Tweet to show everyone that the email we sent you is legit!
+				<p>The Soleau envelope is named for the French inventor Eugene Soleau. It is a fairly common method of proving when you created an original work or invention: simply seal your original plan or work into envelope, then send the envelope to yourself by post. You can use the postmark date to prove that the work existed at that time (if you don't open the envelope!).</p>
+				<p><span class="soleau">Soleau</span> is a modern analogue to the Soleau envelope.  Copy and paste an original work into the box below, and a plain text version of the work will be emailed directly to you with a unique ID number.  At the same time, we will compose a Tweet for you with that same ID <span class="soleau"><a href="https://twitter.com/search?src=typd&q=%40soleauletter" target="_blank">@SoleauLetter</a></span>. Post that Tweet to show everyone that the email we sent you is legit!
 				<a href="#email" class="next">&#11015;</a>
 			</div>
 		</div>
@@ -58,9 +58,7 @@
 			<div id="email">
 				<h2>How Do We Get Started?</h2>
 				<p>First, we need your email.</p>
-				<form>
-					<input type="email" placeholder="Email address..." id="fullEmail" name="email">
-				</form>
+				<input type="email" placeholder="Email address..." id="fullEmail" name="email">
 				<a href="#work" class="next">&#11015;</a>
 			</div>
 		</div>
@@ -68,10 +66,12 @@
 			<div id="work">
 				<h2>Ok, let's go!</h2>
 				<p>Now, copy and paste the original work you want to 'register' with <span class="soleau">Soleau</span>. When you click <span class="soleau">Publish</span> a new window will open with your Tweet registration.</p>
-				<form id="publish" enctype="text/plain" method="post">
+				<form id="publish" enctype="multipart/form-data" method="post" name="publish" action="email.php">
 					<input type="hidden" name="SoleauID" id="soleauID"/>
-					<textarea name="Your Work" placeholder="Copy and paste your work here..." id="fullWork"></textarea>
-					<input type="submit" id="pooTeeWeet" value="publish">
+					<input type="hidden" name="email" id="toLine">
+					<input type="text" placeholder="Title of Work..." id="workTitle" name="workTitle">
+					<textarea name="yourwork" placeholder="Copy and paste your work here..." id="fullWork" required></textarea>
+					<input type="submit" name="submit" value="Publish">
 				</form>
 			</div>
 <!-- 			<footer>
