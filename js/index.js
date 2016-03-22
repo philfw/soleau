@@ -4,6 +4,13 @@
 $(document).ready(function(){
 	$('.title').fadeIn(500);
 	$('.title').css('display','table-cell')
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
 });
 
 //HAMBURGER MENU
@@ -64,6 +71,14 @@ function getId() {
 
 $('#pooTeeWeet').on('click', function(event) {
 	event.preventDefault();
+});
+
+//SCROLL TO TOP
+	
+//Click event to scroll to top
+$('.scrollToTop').click(function(){
+	$('html, body').animate({scrollTop : 0},800);
+	return false;
 });
 
 
