@@ -6,6 +6,17 @@ $(document).ready(function(){
 	$('.title').css('display','table-cell')
 });
 
+//HAMBURGER MENU
+
+$('.hamburger').on('click', function() {
+	$('hamburger').toggleClass('fixed');
+	$('nav ul li').slideToggle(300);
+	$('nav ul li').css({
+		display:'list-item',
+		float:'left'
+	});
+});
+
 // AUTO SCROLLING
 
 $('.next').on('click', function (event){

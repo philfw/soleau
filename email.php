@@ -15,9 +15,12 @@
 			}
 			p {
 				margin-top:40px;
-				font-size:2em;
+				font-size:1.25em;
 				width:80%;
 				margin-left:10%;
+			}
+			.work {
+				margin-bottom:40px;
 			}
 
 		</style>
@@ -30,17 +33,16 @@
 		<header class="clearfix">
 			<a class ="left logo" href="index.html">Soleau</a>
 			<nav class ="right clearfix">
+				<div class="hamburger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
 				<ul>
 					<li class="right"><a href="#about" class="next">About</a></li>
 					<li class="right"><a class="faq" href="faq.html">FAQ</a></li>
 					<li class="right"><a class="faq" href="https://twitter.com/search?src=typd&q=%40soleauletter" target="_blank">@SoleauLetter</a></li>
 				</ul>
-				<div class="hamburger">
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div>
-					<div id="">
-				</div>
 			</nav>
 		</header>
 
@@ -68,7 +70,7 @@
 			?>
 			<p>Now you can click the button below to compose a Tweet with the same Soleau ID!</p>
 			<a href="https://twitter.com/share?text=.@SoleauLetter I just registered a work with SoleauID %23<?php echo $SoleauID?>" target="_blank"><input type="submit" value="Tweet!"></a>
-			
+
 		</div>
 		<script src="js/index.js"></script>
 	</body>

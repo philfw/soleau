@@ -37,6 +37,10 @@ a.next {
 	float:right;
 }
 
+.fixed {
+	position:fixed;
+}
+
 .clearfix::after {
   content: ".";
   display: block;
@@ -59,6 +63,7 @@ header {
 	position:fixed;
 	z-index:1;
 	box-shadow: 0 5px 3px #000;
+	top:0;
 }
 
 a.logo {
@@ -106,7 +111,7 @@ nav li {
 	display:table;
 	height:100vh;
 	width:100%;
-	background-image: url(../images/writingbg.jpg);
+	background-image: url(../images/writingbg-min.jpg);
 	background-size:cover;
 	background-repeat:no-repeat;
 }
@@ -330,9 +335,10 @@ input[type="submit"]:hover {
 }
 
 @media only screen and (max-width:640px) {
-	nav ul {display:none;}
 	p {margin:0 40px; font-size:1em;}
 	input {width:100px;}
+	nav {display:inline-block; position:relative;}
+	header {max-height:none; height:auto;}
 
 	nav .hamburger {
 		display:inline-block;
@@ -343,8 +349,14 @@ input[type="submit"]:hover {
 		cursor:pointer;
 	}
 
-	nav .hamburger li {
+	nav ul li {
+		float:none;
 		display:none;
+		font-size: 1.5em;
+		padding:9px;
+		color:white;
+		background-color:black;
+		width:200px;
 	}
 
 	.line {
